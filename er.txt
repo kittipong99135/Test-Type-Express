@@ -1,0 +1,22 @@
++-----------------+      +-----------------+     +----------------+
+|     Factory     |      |  ProductionLine |     |    Operator    |
++-----------------+      +-----------------+     +----------------+
+| FactoryID (PK)  |      | LineID (PK)     |     | OperatorID (PK)|
+| FactoryName     |      | LineName        |     | OperatorName   |
+| Location        |      | LineManager     |     | Position       |
+| ContactNumber   |      | Capacity        |     | ContactInfo    |
++-----------------+      +-----------------+     +----------------+
+        |                       |                        |
+        |                       |                        |
+        |     +-----------------+                        |
+        |     |                                         |
+        |     |                                         |
++-------+-----v------+                        +---------+-----v------+
+|  EmissionRecord  |                        |    Location      |
++------------------+                        +------------------+
+| RecordID (PK)    |                        | LocationID (PK)  |
+| LineID (FK)      |                        | LocationName     |
+| Date             |                        | Latitude         |
+| CarbonDioxideLevel|                       | Longitude        |
+| OperatorID (FK)  |                        +------------------+
++------------------+
